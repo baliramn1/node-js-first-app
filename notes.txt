@@ -1,0 +1,44 @@
+npm install -g nodemon:
+// nodemon is a package that automatically runs the program when we save it so we dont have to execute the node i.. command 
+// -g means install globally not just for this project
+
+//nodemon i (tab)
+//so from now if we change the code then the result will automatically shown
+
+import and export:
+normally we import like const http = require("http")
+to change this, to import like we do import in react (import http from "http")
+enter type: "module" in package.json 
+
+
+fs: 
+with the help of fs we can write or read any file
+
+some methods:
+get: to get data
+post: to create data
+put: to update data
+delete: to delete data  
+
+
+
+
+express:
+install express by "npm install express"
+
+impor express as "express"
+
+then goto package.json goto script array 
+and add this
+"scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+
+
+so now instead of nodemon index.js 
+we can execute npm run dev to run the same command
+
+dev: is for developement that means the file should run imediately when changes are made to it.
+start: is for production enviroment that means the file should execute only ones.
+
