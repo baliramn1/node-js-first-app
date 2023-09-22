@@ -1,1 +1,0 @@
-console.log("hi, i am a file from public folder")
