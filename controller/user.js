@@ -1,7 +1,5 @@
-import { faUserDoctor } from "@fortawesome/free-solid-svg-icons"
 import { user } from "../models/user.js"
 import bcrypt from "bcrypt"
-
 import { sendCookie } from "../utils/features.js"
 
 export const getAllUsers = async (req, res) => { }
