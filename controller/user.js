@@ -6,23 +6,22 @@ export const getAllUsers = async (req, res) => { }
 
 
 export const register = async (req, res, next) => {
-    // try {
+    try {
 
-    //     const { name, email, password } = req.body
+        const { name, email, password } = req.body
 
-    //     let User = await user.findOne({ email })
+        let User = await user.findOne({ email })
 
-    //     if (User) return next(new ErrorHandler("User Already Exist", 400))
+        if (User) return next(new ErrorHandler("User Already Exist", 400))
 
-    //     const hashedPassword = await bcrypt.hash(password, 10)
+        const hashedPassword = await bcrypt.hash(password, 10)
 
-    //     User = await user.create({ name, email, password: hashedPassword })
+        User = await user.create({ name, email, password: hashedPassword })
 
-        // sendCookie(User, res, "Registered successfully", 201)
-        sendCookie(res, "Registered successfully", 201)
-    // } catch (error) {
-    //     next(error)
-    // }
+        sendCookie(User, res, "Registered successfully", 201)
+    } catch (error) {
+        next(error)
+    }
 }
 
 
