@@ -1,0 +1,1 @@
+backend and frontend runs on diff ports so request from backend to frontend or vice verca which are on diff ports is not allowed by the browers thats why we use "cors" package
